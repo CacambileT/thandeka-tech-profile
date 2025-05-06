@@ -11,9 +11,9 @@ const EducationSection = () => {
       color: "brand-red"
     },
     {
-      degree: "HC in ICT",
+      degree: "Higher Certificate in Information and Communication Technology",
       institution: "Cape Peninsula University of Technology",
-      duration: "",
+      duration: "1 year",
       color: "brand-gold"
     }
   ];
@@ -46,24 +46,24 @@ const EducationSection = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
-          <h3 className="text-xl font-bold mb-6 text-brand-dark">Education</h3>
+          <h3 className="text-xl font-bold mb-6 text-brand-dark dark:text-white">Education</h3>
           <div className="space-y-6">
             {educations.map((edu, index) => (
               <Card key={index} className={`p-6 card-hover border-l-4 border-l-${edu.color}`}>
-                <h4 className="text-lg font-bold text-brand-dark">{edu.degree}</h4>
-                <p className="text-gray-600 mt-1">{edu.institution}</p>
-                {edu.duration && <p className="text-sm text-gray-500 mt-2">{edu.duration}</p>}
+                <h4 className="text-lg font-bold text-brand-dark dark:text-white">{edu.degree}</h4>
+                <p className="text-gray-600 dark:text-gray-300 mt-1">{edu.institution}</p>
+                {edu.duration && <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">{edu.duration}</p>}
               </Card>
             ))}
           </div>
         </div>
         
         <div>
-          <h3 className="text-xl font-bold mb-6 text-brand-dark">Certifications</h3>
+          <h3 className="text-xl font-bold mb-6 text-brand-dark dark:text-white">Certifications</h3>
           <div className="space-y-4">
             {certifications.map((cert, index) => (
-              <Card key={index} className="p-4 card-hover">
-                <h4 className="font-medium text-brand-dark">
+              <Card key={index} className="p-4 card-hover dark:bg-gray-800 dark:border-gray-700">
+                <h4 className="font-medium text-brand-dark dark:text-white">
                   {cert.url ? (
                     <a 
                       href={cert.url} 
@@ -77,7 +77,7 @@ const EducationSection = () => {
                     cert.title
                   )}
                 </h4>
-                <div className="flex justify-between mt-1 text-sm text-gray-600">
+                <div className="flex justify-between mt-1 text-sm text-gray-600 dark:text-gray-300">
                   <span>{cert.organization}</span>
                   <span>{cert.date}</span>
                 </div>
