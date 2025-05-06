@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -97,5 +100,55 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .section-heading {
+    @apply text-3xl font-bold mb-6 text-brand-dark relative inline-block;
+  }
+
+  .section-heading::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-1/2 h-1 bg-brand-red rounded;
+  }
+
+  .skill-pill {
+    @apply bg-white px-4 py-2 rounded-full text-sm font-medium border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300 text-brand-dark;
+  }
+
+  .nav-link {
+    @apply relative text-brand-dark hover:text-brand-red transition-colors duration-300 font-medium;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute left-0 bottom-[-4px] w-0 h-[2px] bg-brand-red transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+  
+  .section-container {
+    @apply py-16 px-4 md:px-8 max-w-7xl mx-auto;
+  }
+  
+  .card-hover {
+    @apply transition-transform duration-300 hover:-translate-y-2;
+  }
+  
+  .timeline-item {
+    @apply relative pl-10 pb-10 border-l border-gray-200;
+  }
+  
+  .timeline-item::before {
+    content: '';
+    @apply absolute left-[-8px] top-0 w-4 h-4 bg-brand-red rounded-full border-2 border-white;
   }
 }
