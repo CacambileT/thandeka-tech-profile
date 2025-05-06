@@ -8,13 +8,13 @@ const EducationSection = () => {
       degree: "Diploma in Communication Networks",
       institution: "Cape Peninsula University of Technology",
       duration: "3 years",
-      color: "brand-red"
+      color: "border-brand-red"
     },
     {
       degree: "Higher Certificate in Information and Communication Technology",
       institution: "Cape Peninsula University of Technology",
       duration: "1 year",
-      color: "brand-gold"
+      color: "border-brand-gold"
     }
   ];
   
@@ -49,7 +49,7 @@ const EducationSection = () => {
           <h3 className="text-xl font-bold mb-6 text-brand-dark dark:text-white">Education</h3>
           <div className="space-y-6">
             {educations.map((edu, index) => (
-              <Card key={index} className={`p-6 card-hover border-l-4 border-l-${edu.color}`}>
+              <Card key={index} className={`p-6 card-hover border-l-4 ${edu.color}`}>
                 <h4 className="text-lg font-bold text-brand-dark dark:text-white">{edu.degree}</h4>
                 <p className="text-gray-600 dark:text-gray-300 mt-1">{edu.institution}</p>
                 {edu.duration && <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">{edu.duration}</p>}

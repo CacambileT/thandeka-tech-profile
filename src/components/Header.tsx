@@ -1,53 +1,37 @@
 
 import { useState, useEffect } from 'react';
 import { Menu, X, Moon, Sun } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { Toggle } from './ui/toggle';
+import { useTheme } from './ThemeProvider';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const isMobile = useIsMobile();
+  const { isDarkMode, toggleDarkMode } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
 
-    // Check for saved theme preference
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-      setIsDarkMode(true);
-      document.documentElement.classList.add('dark');
-    }
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Education', href: '#education' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Skills', href: '/skills' },
+    { name: 'Experience', href: '/experience' },
+    { name: 'Education', href: '/education' },
+    { name: 'Contact', href: '/contact' }
   ];
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-  };
-
-  const toggleDarkMode = () => {
-    if (isDarkMode) {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    } else {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    }
-    setIsDarkMode(!isDarkMode);
   };
 
   return (
@@ -57,17 +41,21 @@ const Header = () => {
       } backdrop-blur-sm`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <a href="#home" className="text-xl font-bold text-brand-dark dark:text-white">
+        <Link to="/" className="text-xl font-bold text-brand-dark dark:text-white">
           TC<span className="text-brand-red">.</span>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         {!isMobile && (
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <a key={item.name} href={item.href} className="nav-link dark:text-white dark:hover:text-brand-red">
+              <Link 
+                key={item.name} 
+                to={item.href} 
+                className="nav-link dark:text-white dark:hover:text-brand-red"
+              >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </nav>
         )}
@@ -105,14 +93,14 @@ const Header = () => {
         <div className="fixed inset-0 bg-white dark:bg-gray-900 z-40 pt-20">
           <nav className="flex flex-col items-center gap-8 p-8">
             {navItems.map((item) => (
-              <a 
+              <Link 
                 key={item.name} 
-                href={item.href} 
+                to={item.href} 
                 className="nav-link text-xl dark:text-white"
                 onClick={toggleMenu}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </nav>
         </div>
