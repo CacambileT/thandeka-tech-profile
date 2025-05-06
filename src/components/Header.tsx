@@ -1,7 +1,6 @@
 
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Button } from './ui/button';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 const Header = () => {
@@ -63,13 +62,6 @@ const Header = () => {
             {menuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         )}
-
-        {/* Download Resume Button (Desktop) */}
-        {!isMobile && (
-          <Button className="bg-brand-red hover:bg-brand-red/90 text-white">
-            Download CV
-          </Button>
-        )}
       </div>
 
       {/* Mobile Menu */}
@@ -86,12 +78,6 @@ const Header = () => {
                 {item.name}
               </a>
             ))}
-            <Button 
-              className="mt-4 bg-brand-red hover:bg-brand-red/90 text-white w-full"
-              onClick={toggleMenu}
-            >
-              Download CV
-            </Button>
           </nav>
         </div>
       )}

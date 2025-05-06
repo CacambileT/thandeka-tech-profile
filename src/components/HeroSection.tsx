@@ -1,6 +1,5 @@
 
 import { Button } from './ui/button';
-import { Download } from 'lucide-react';
 
 const HeroSection = () => {
   return (
@@ -26,11 +25,6 @@ const HeroSection = () => {
             </p>
             
             <div className="flex flex-wrap gap-4">
-              <Button 
-                className="bg-brand-red hover:bg-brand-red/90 text-white"
-              >
-                <Download className="mr-2 h-4 w-4" /> Download CV
-              </Button>
               <Button 
                 variant="outline" 
                 className="border-brand-red text-brand-red hover:bg-brand-red/5"
