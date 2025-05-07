@@ -15,12 +15,12 @@ const HeroSection = () => {
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
           <div className="w-full md:w-1/2 order-2 md:order-1 animate-fade-in" style={{animationDelay: '0.3s'}}>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-brand-dark dark:text-white">
-              Thandeka <span className="text-brand-red">Cacambile</span>
+              <span className="text-brand-red">Thandeka Cacambile</span>
             </h1>
             <h2 className="text-xl md:text-2xl font-medium mb-6 text-gray-600 dark:text-gray-300">
               ICT Graduate | Network Support Technician | Cloud Computing Trainee
             </h2>
-            <p className="text-gray-700 dark:text-gray-300 mb-8 max-w-lg">
+            <p className="text-gray-700 dark:text-gray-300 mb-8 max-w-lg text-brand-gold">
               A motivated and tech-savvy individual with expertise in networking, 
               IT support, and cloud computing solutions.
             </p>
