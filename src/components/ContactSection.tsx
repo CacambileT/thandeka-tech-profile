@@ -28,8 +28,8 @@ const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      // Using a public Formspree endpoint
-      const response = await fetch("https://formspree.io/f/mrgnrzkw", {
+      // Using your personal Formspree endpoint - replace "xknpwger" with your actual form ID
+      const response = await fetch("https://formspree.io/f/xknpwger", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
