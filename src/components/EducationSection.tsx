@@ -1,6 +1,9 @@
 
 import { BookOpen, GraduationCap, School } from 'lucide-react';
 import { Card } from './ui/card';
+import { AspectRatio } from './ui/aspect-ratio';
+import { Avatar } from './ui/avatar';
+import { Badge } from './ui/badge';
 
 const EducationSection = () => {
   const educations = [
@@ -32,7 +35,8 @@ const EducationSection = () => {
       title: "Google IT Support Certificate",
       organization: "Coursera",
       date: "Nov 2021",
-      url: "https://www.credly.com/users/thandeka-cacambile"
+      url: "https://www.credly.com/users/thandeka-cacambile",
+      badge: "/lovable-uploads/f1ede04a-99d6-44f3-85cf-036108c23891.png"
     },
     {
       title: "Introduction to Networking and Cloud Computing",
@@ -85,23 +89,38 @@ const EducationSection = () => {
           <div className="space-y-4">
             {certifications.map((cert, index) => (
               <Card key={index} className="p-4 card-hover dark:bg-gray-800 dark:border-gray-700">
-                <h4 className="font-medium text-brand-dark dark:text-white text-brand-gold">
-                  {cert.url ? (
-                    <a 
-                      href={cert.url} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="hover:text-brand-red transition-colors"
-                    >
-                      {cert.title}
-                    </a>
-                  ) : (
-                    cert.title
+                <div className="flex items-start gap-4">
+                  {cert.badge && (
+                    <div className="flex-shrink-0 w-16 h-16">
+                      <AspectRatio ratio={1}>
+                        <img 
+                          src={cert.badge} 
+                          alt={`${cert.title} badge`} 
+                          className="w-full h-full object-contain"
+                        />
+                      </AspectRatio>
+                    </div>
                   )}
-                </h4>
-                <div className="flex justify-between mt-1 text-sm text-gray-600 dark:text-gray-300">
-                  <span>{cert.organization}</span>
-                  <span>{cert.date}</span>
+                  <div className="flex-1">
+                    <h4 className="font-medium text-brand-dark dark:text-white text-brand-gold">
+                      {cert.url ? (
+                        <a 
+                          href={cert.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="hover:text-brand-red transition-colors"
+                        >
+                          {cert.title}
+                        </a>
+                      ) : (
+                        cert.title
+                      )}
+                    </h4>
+                    <div className="flex justify-between mt-1 text-sm text-gray-600 dark:text-gray-300">
+                      <span>{cert.organization}</span>
+                      <span>{cert.date}</span>
+                    </div>
+                  </div>
                 </div>
               </Card>
             ))}
