@@ -12,14 +12,16 @@ const EducationSection = () => {
       institution: "Cape Peninsula University of Technology",
       duration: "3 years",
       color: "border-brand-red",
-      image: "/lovable-uploads/17d7c7c1-43b2-44fe-ab68-ba7c36e3cc32.png"
+      image: "/lovable-uploads/17d7c7c1-43b2-44fe-ab68-ba7c36e3cc32.png",
+      url: "https://drive.google.com/file/d/1C1f3A92kDczP9k8kmKGGxZMb6tDmw7Dg/view?usp=drive_link"
     },
     {
       degree: "Higher Certificate in Information and Communication Technology",
       institution: "Cape Peninsula University of Technology",
       duration: "1 year",
       color: "border-brand-gold",
-      image: "/lovable-uploads/17d7c7c1-43b2-44fe-ab68-ba7c36e3cc32.png"
+      image: "/lovable-uploads/17d7c7c1-43b2-44fe-ab68-ba7c36e3cc32.png",
+      url: "https://drive.google.com/file/d/1PBBIxZK-Xo_4V46sonGI1NYxbpiumRXD/view?usp=drive_link"
     },
     {
       degree: "National Senior Certificate",
@@ -82,7 +84,20 @@ const EducationSection = () => {
                     </div>
                   )}
                   <div className="md:w-2/3">
-                    <h4 className="text-lg font-bold text-brand-dark dark:text-white text-brand-gold">{edu.degree}</h4>
+                    <h4 className="text-lg font-bold text-brand-dark dark:text-white text-brand-gold">
+                      {edu.url ? (
+                        <a 
+                          href={edu.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="hover:text-brand-red transition-colors"
+                        >
+                          {edu.degree}
+                        </a>
+                      ) : (
+                        edu.degree
+                      )}
+                    </h4>
                     <p className="text-gray-600 dark:text-gray-300 mt-1">{edu.institution}</p>
                     {edu.duration && <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">{edu.duration}</p>}
                   </div>
@@ -140,3 +155,4 @@ const EducationSection = () => {
 };
 
 export default EducationSection;
+
