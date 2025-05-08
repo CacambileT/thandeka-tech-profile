@@ -1,5 +1,5 @@
 
-import { Briefcase, Calendar } from 'lucide-react';
+import { Briefcase, Calendar, Hospital } from 'lucide-react';
 import { Card } from './ui/card';
 import { Table, TableBody, TableCell, TableRow } from './ui/table';
 
@@ -46,6 +46,13 @@ const ExperienceSection = () => {
   ];
 
   const projects = [
+    {
+      title: "Packet Tracer - Cloud Computing on Healthcare Systems",
+      period: "2024",
+      institution: "Cape Peninsula University of Technology",
+      description: "This project focused on how cloud technologies can improve the efficiency, scalability, and security of healthcare IT infrastructure. It explored the benefits of migrating healthcare data and applications to cloud platforms, such as enhanced patient data management, remote access to medical records, and cost-effective storage solutions. The project also addressed critical considerations like data privacy, regulatory compliance (e.g., HIPAA), and the role of cloud-based tools in supporting telemedicine and real-time collaboration among healthcare providers.",
+      url: "https://drive.google.com/file/d/1ptrAE9hmIOYqt-vHPNszwKPCOsAzQAap/view?usp=drive_link"
+    },
     {
       title: "Design and Implementation of a Functional Data Center for IT Department",
       period: "6 months",
@@ -109,7 +116,23 @@ const ExperienceSection = () => {
             {projects.map((project, index) => (
               <Card key={index} className={`p-6 md:p-8 border-l-4 ${index % 2 === 0 ? 'border-l-brand-red' : 'border-l-brand-gold'} dark:bg-gray-800 dark:border-gray-700`}>
                 <div className="flex flex-wrap justify-between items-start gap-2 mb-4">
-                  <h3 className="text-xl font-bold text-brand-dark dark:text-white">{project.title}</h3>
+                  <h3 className="text-xl font-bold text-brand-dark dark:text-white">
+                    {project.url ? (
+                      <a 
+                        href={project.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="hover:text-brand-red transition-colors flex items-center gap-2"
+                      >
+                        {project.title === "Packet Tracer - Cloud Computing on Healthcare Systems" && 
+                          <Hospital className="h-5 w-5 text-brand-red" />
+                        }
+                        {project.title}
+                      </a>
+                    ) : (
+                      project.title
+                    )}
+                  </h3>
                   <span className="inline-block px-3 py-1 bg-brand-red/10 text-brand-red rounded-full text-sm font-medium dark:bg-brand-red/20">
                     {project.period}
                   </span>
