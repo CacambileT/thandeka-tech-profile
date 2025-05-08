@@ -41,12 +41,19 @@ const EducationSection = () => {
     {
       title: "Introduction to Networking and Cloud Computing",
       organization: "Microsoft/Coursera",
-      date: "Feb 2025"
+      date: "Feb 2025",
+      url: "https://coursera.org/share/b66f80dbfe633b576d9f819a01e78c80"
     },
     {
       title: "Google Cloud Fundamentals: Core Infrastructure",
       organization: "Google Cloud/Coursera",
       date: "April 2025"
+    },
+    {
+      title: "Developing Applications with Google Cloud: Foundations",
+      organization: "Google Cloud/Coursera",
+      date: "April 2025",
+      url: "https://coursera.org/share/a26c217c9532e7f0348b3190992ee73f"
     }
   ];
 
