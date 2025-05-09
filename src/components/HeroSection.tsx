@@ -27,7 +27,7 @@ const HeroSection = () => {
             
             <div className="flex items-center mb-8 text-gray-600 dark:text-gray-300">
               <MapPin className="h-5 w-5 mr-2 text-brand-red" />
-              <span>Cape Town, South Africa</span>
+              <span id="user-location">Cape Town, South Africa</span>
             </div>
             
             <div className="flex flex-wrap gap-4">
@@ -54,6 +54,30 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Script to get user's location */}
+      <script dangerouslySetInnerHTML={{
+        __html: `
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+              (position) => {
+                fetch(\`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=\${position.coords.latitude}&longitude=\${position.coords.longitude}&localityLanguage=en\`)
+                  .then(response => response.json())
+                  .then(data => {
+                    const locationElement = document.getElementById('user-location');
+                    if (locationElement && data.city) {
+                      locationElement.textContent = \`\${data.city}, \${data.countryName}\`;
+                    }
+                  })
+                  .catch(err => console.error("Error fetching location data:", err));
+              },
+              (error) => {
+                console.error("Error getting location:", error);
+              }
+            );
+          }
+        `
+      }} />
     </section>
   );
 };

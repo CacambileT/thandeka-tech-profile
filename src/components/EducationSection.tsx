@@ -43,7 +43,8 @@ const EducationSection = () => {
     {
       title: "Google Cloud Fundamentals: Core Infrastructure",
       organization: "Google Cloud/Coursera",
-      date: "April 2025"
+      date: "April 2025",
+      url: "https://drive.google.com/file/d/1s0xS3UdKII2OQL1JtibcGfGUhGkIgf4h/view?usp=drive_link"
     },
     {
       title: "Introduction to Networking and Cloud Computing",
@@ -155,4 +156,3 @@ const EducationSection = () => {
 };
 
 export default EducationSection;
-

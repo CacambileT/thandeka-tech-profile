@@ -22,7 +22,7 @@ const SkillsSection = () => {
     {
       name: "Software Tools",
       icon: <Code className="h-6 w-6 text-brand-red" />,
-      skills: ["Wireshark", "Microsoft Office", "Linux CLI", "Linux & Mac", "Java & Python"]
+      skills: ["Wireshark", "Microsoft Office", "Linux & Mac", "Java & Python"]
     },
     {
       name: "Security",
