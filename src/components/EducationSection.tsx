@@ -8,6 +8,14 @@ import { Badge } from './ui/badge';
 const EducationSection = () => {
   const educations = [
     {
+      degree: "Advanced Diploma in ICT in Communication Networks",
+      institution: "Cape Peninsula University of Technology",
+      duration: "Currently Enrolled",
+      color: "border-brand-red",
+      image: "/lovable-uploads/17d7c7c1-43b2-44fe-ab68-ba7c36e3cc32.png",
+      current: true
+    },
+    {
       degree: "Diploma in Communication Networks",
       institution: "Cape Peninsula University of Technology",
       duration: "3 years",
@@ -106,7 +114,10 @@ const EducationSection = () => {
                       )}
                     </h4>
                     <p className="text-gray-600 dark:text-gray-300 mt-1">{edu.institution}</p>
-                    {edu.duration && <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">{edu.duration}</p>}
+                    <div className="flex items-center mt-2">
+                      {edu.duration && <p className="text-sm text-gray-500 dark:text-gray-400">{edu.duration}</p>}
+                      {edu.current && <Badge className="ml-2 bg-brand-red">Current</Badge>}
+                    </div>
                   </div>
                 </div>
               </Card>
