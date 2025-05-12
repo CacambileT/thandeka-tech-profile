@@ -1,4 +1,3 @@
-
 import { Briefcase, Calendar, Hospital } from 'lucide-react';
 import { Card } from './ui/card';
 import { Table, TableBody, TableCell, TableRow } from './ui/table';
@@ -32,9 +31,9 @@ const ExperienceSection = () => {
       color: "brand-gold"
     },
     {
-      title: "Customer Service Agent",
-      company: "TELEPERFORMANCE",
-      location: "",
+      title: "Sales Associate",
+      company: "Mr Price",
+      location: "Khayelitsha",
       period: "Jan 2020 - Oct 2020",
       responsibilities: [
         "Consistently exceeded sales targets, contributing to a 15% increase in overall company sales.",
@@ -63,7 +62,8 @@ const ExperienceSection = () => {
       title: "TaskStream - Cloud Project",
       period: "April 2025",
       institution: "CAPACITI",
-      description: "TaskStream is a simple, efficient task management app created using Google's no-code AppSheet platform. Designed to streamline daily planning, TaskStream helps users prioritize important tasks, stay organized, and reduce stress. With a clean interface and customizable features, it clarifies your daily workflow—making productivity easier and more accessible for everyone."
+      description: "TaskStream is a simple, efficient task management app created using Google's no-code AppSheet platform. Designed to streamline daily planning, TaskStream helps users prioritize important tasks, stay organized, and reduce stress. With a clean interface and customizable features, it clarifies your daily workflow—making productivity easier and more accessible for everyone.",
+      url: "https://www.appsheet.com/start/41090437-fc54-4566-b88c-6666d863411e"
     }
   ];
 

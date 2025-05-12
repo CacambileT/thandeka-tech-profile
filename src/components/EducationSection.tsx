@@ -47,6 +47,12 @@ const EducationSection = () => {
       url: "https://drive.google.com/file/d/1s0xS3UdKII2OQL1JtibcGfGUhGkIgf4h/view?usp=drive_link"
     },
     {
+      title: "Generative AI: Introduction and Applications",
+      organization: "Coursera",
+      date: "May 2025",
+      url: "https://www.coursera.org/account/accomplishments/verify/TXU1FNCYPFAJ?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"
+    },
+    {
       title: "Introduction to Networking and Cloud Computing",
       organization: "Microsoft/Coursera",
       date: "Feb 2025",
