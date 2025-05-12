@@ -13,7 +13,8 @@ const EducationSection = () => {
       duration: "Currently Enrolled",
       color: "border-brand-red",
       image: "/lovable-uploads/17d7c7c1-43b2-44fe-ab68-ba7c36e3cc32.png",
-      current: true
+      inProgress: true,
+      url: "https://capeitinitiative-my.sharepoint.com/:b:/g/personal/thandeka_cacambile_capaciti_org_za/EUqsPSyoMrtNpkSsoCWGk6EBJytGv0s2e6Vt54h-FSR8EA?e=ajBmqI"
     },
     {
       degree: "Diploma in Communication Networks",
@@ -43,6 +44,12 @@ const EducationSection = () => {
   // Sorting the certifications from newest to oldest
   const certifications = [
     {
+      title: "Generative AI: Prompt Engineering Basics",
+      organization: "Coursera",
+      date: "May 2025",
+      url: "https://coursera.org/share/f40dde152fbee8d3c71a02f34602c7cd"
+    },
+    {
       title: "Generative AI: Introduction and Applications",
       organization: "Coursera",
       date: "May 2025",
@@ -59,6 +66,30 @@ const EducationSection = () => {
       organization: "Google Cloud/Coursera",
       date: "April 2025",
       url: "https://drive.google.com/file/d/1s0xS3UdKII2OQL1JtibcGfGUhGkIgf4h/view?usp=drive_link"
+    },
+    {
+      title: "Introduction to Cloud Computing",
+      organization: "Coursera",
+      date: "March 2025",
+      url: "https://coursera.org/share/81f0d707b7be33abeb230d2d97943861"
+    },
+    {
+      title: "Verbal Communications and Presentation Skills",
+      organization: "Coursera",
+      date: "March 2025",
+      url: "https://coursera.org/share/ee14cfef69784df7d2ef260e9c21de47"
+    },
+    {
+      title: "Cloud Computing Foundations",
+      organization: "Coursera",
+      date: "Feb 2025",
+      url: "https://coursera.org/share/eab4720363c92ecbb6436d2fec13285d"
+    },
+    {
+      title: "Write Professional Emails in English",
+      organization: "Coursera",
+      date: "Feb 2025",
+      url: "https://coursera.org/share/65e664d2cb4f68383468ad4df693c5c4"
     },
     {
       title: "Introduction to Networking and Cloud Computing",
@@ -116,7 +147,7 @@ const EducationSection = () => {
                     <p className="text-gray-600 dark:text-gray-300 mt-1">{edu.institution}</p>
                     <div className="flex items-center mt-2">
                       {edu.duration && <p className="text-sm text-gray-500 dark:text-gray-400">{edu.duration}</p>}
-                      {edu.current && <Badge className="ml-2 bg-brand-red">Current</Badge>}
+                      {edu.inProgress && <Badge className="ml-2 bg-brand-red">In Progress</Badge>}
                     </div>
                   </div>
                 </div>

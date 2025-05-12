@@ -31,9 +31,9 @@ const ExperienceSection = () => {
       color: "brand-gold"
     },
     {
-      title: "Sales Associate",
-      company: "Mr Price",
-      location: "Khayelitsha",
+      title: "Customer Service Agent",
+      company: "TELEPERFORMANCE",
+      location: "",
       period: "Jan 2020 - Oct 2020",
       responsibilities: [
         "Consistently exceeded sales targets, contributing to a 15% increase in overall company sales.",
@@ -45,6 +45,13 @@ const ExperienceSection = () => {
   ];
 
   const projects = [
+    {
+      title: "Personal Portfolio Website",
+      period: "2025",
+      institution: "Self-developed",
+      description: "A responsive personal portfolio website showcasing my skills, education, experience, and projects. Built with React, Tailwind CSS, and shadcn/ui components. The portfolio is continuously updated to reflect my latest achievements and experiences in the tech industry.",
+      url: "https://thandeka-tech-profile.lovable.app"
+    },
     {
       title: "Packet Tracer - Cloud Computing on Healthcare Systems",
       period: "2024",
@@ -74,79 +81,79 @@ const ExperienceSection = () => {
         <h2 className="section-heading dark:text-white">Work & Project Experience</h2>
       </div>
 
-      <div className="space-y-12">
-        <div>
-          <h3 className="text-xl font-bold mb-6 text-brand-dark dark:text-white flex items-center gap-2">
-            <Calendar className="h-5 w-5 text-brand-red" />
-            Work Experience
-          </h3>
-          <div className="space-y-8">
-            {workExperiences.map((exp, index) => (
-              <Card key={index} className={`p-6 md:p-8 border-l-4 border-l-${exp.color} dark:bg-gray-800 dark:border-gray-700`}>
-                <div className="flex flex-wrap justify-between items-start gap-2 mb-4">
-                  <h3 className="text-xl font-bold text-brand-dark dark:text-white">{exp.title}</h3>
-                  <span className="inline-block px-3 py-1 bg-brand-red/10 text-brand-red rounded-full text-sm font-medium dark:bg-brand-red/20">
-                    {exp.period}
-                  </span>
-                </div>
-                
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  {exp.company}{exp.location && `, ${exp.location}`}
-                </p>
-                
-                <div className="space-y-2">
-                  {exp.responsibilities.map((resp, idx) => (
-                    <div key={idx} className="flex items-start gap-2">
-                      <span className="text-brand-red mt-1">•</span>
-                      <p className="text-gray-700 dark:text-gray-200">{resp}</p>
-                    </div>
-                  ))}
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        <div>
-          <h3 className="text-xl font-bold mb-6 text-brand-dark dark:text-white flex items-center gap-2">
-            <Briefcase className="h-5 w-5 text-brand-red" />
-            Project Experience
-          </h3>
-          <div className="space-y-8">
-            {projects.map((project, index) => (
-              <Card key={index} className={`p-6 md:p-8 border-l-4 ${index % 2 === 0 ? 'border-l-brand-red' : 'border-l-brand-gold'} dark:bg-gray-800 dark:border-gray-700`}>
-                <div className="flex flex-wrap justify-between items-start gap-2 mb-4">
-                  <h3 className="text-xl font-bold text-brand-dark dark:text-white">
-                    {project.url ? (
-                      <a 
-                        href={project.url} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="hover:text-brand-red transition-colors flex items-center gap-2"
-                      >
-                        {project.title === "Packet Tracer - Cloud Computing on Healthcare Systems" && 
-                          <Hospital className="h-5 w-5 text-brand-red" />
-                        }
-                        {project.title}
-                      </a>
-                    ) : (
-                      project.title
-                    )}
-                  </h3>
-                  <span className="inline-block px-3 py-1 bg-brand-red/10 text-brand-red rounded-full text-sm font-medium dark:bg-brand-red/20">
-                    {project.period}
-                  </span>
-                </div>
-                
-                <p className="text-gray-600 dark:text-gray-300 mb-4">{project.institution}</p>
-                
-                <p className="text-gray-700 dark:text-gray-200">{project.description}</p>
-              </Card>
-            ))}
-          </div>
+    <div className="space-y-12">
+      <div>
+        <h3 className="text-xl font-bold mb-6 text-brand-dark dark:text-white flex items-center gap-2">
+          <Calendar className="h-5 w-5 text-brand-red" />
+          Work Experience
+        </h3>
+        <div className="space-y-8">
+          {workExperiences.map((exp, index) => (
+            <Card key={index} className={`p-6 md:p-8 border-l-4 border-l-${exp.color} dark:bg-gray-800 dark:border-gray-700`}>
+              <div className="flex flex-wrap justify-between items-start gap-2 mb-4">
+                <h3 className="text-xl font-bold text-brand-dark dark:text-white">{exp.title}</h3>
+                <span className="inline-block px-3 py-1 bg-brand-red/10 text-brand-red rounded-full text-sm font-medium dark:bg-brand-red/20">
+                  {exp.period}
+                </span>
+              </div>
+              
+              <p className="text-gray-600 dark:text-gray-300 mb-4">
+                {exp.company}{exp.location && `, ${exp.location}`}
+              </p>
+              
+              <div className="space-y-2">
+                {exp.responsibilities.map((resp, idx) => (
+                  <div key={idx} className="flex items-start gap-2">
+                    <span className="text-brand-red mt-1">•</span>
+                    <p className="text-gray-700 dark:text-gray-200">{resp}</p>
+                  </div>
+                ))}
+              </div>
+            </Card>
+          ))}
         </div>
       </div>
-    </section>
+
+      <div>
+        <h3 className="text-xl font-bold mb-6 text-brand-dark dark:text-white flex items-center gap-2">
+          <Briefcase className="h-5 w-5 text-brand-red" />
+          Project Experience
+        </h3>
+        <div className="space-y-8">
+          {projects.map((project, index) => (
+            <Card key={index} className={`p-6 md:p-8 border-l-4 ${index % 2 === 0 ? 'border-l-brand-red' : 'border-l-brand-gold'} dark:bg-gray-800 dark:border-gray-700`}>
+              <div className="flex flex-wrap justify-between items-start gap-2 mb-4">
+                <h3 className="text-xl font-bold text-brand-dark dark:text-white">
+                  {project.url ? (
+                    <a 
+                      href={project.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="hover:text-brand-red transition-colors flex items-center gap-2"
+                    >
+                      {project.title === "Packet Tracer - Cloud Computing on Healthcare Systems" && 
+                        <Hospital className="h-5 w-5 text-brand-red" />
+                      }
+                      {project.title}
+                    </a>
+                  ) : (
+                    project.title
+                  )}
+                </h3>
+                <span className="inline-block px-3 py-1 bg-brand-red/10 text-brand-red rounded-full text-sm font-medium dark:bg-brand-red/20">
+                  {project.period}
+                </span>
+              </div>
+              
+              <p className="text-gray-600 dark:text-gray-300 mb-4">{project.institution}</p>
+              
+              <p className="text-gray-700 dark:text-gray-200">{project.description}</p>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
   );
 };
 
