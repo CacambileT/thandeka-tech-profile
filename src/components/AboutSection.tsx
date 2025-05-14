@@ -10,6 +10,15 @@ const About = () => {
       <Header />
       <div className="pt-20">
         <AboutSection />
+        <div className="mb-10">
+          <Image
+            src="/images/About me.jpg" // make sure this matches the file you placed in `public/images`
+            alt="Portrait"
+            width={400}
+            height={500}
+            className="rounded-2xl shadow-lg object-cover"
+          />
+        </div>
       </div>
       <Footer />
       <ScrollToTop />
