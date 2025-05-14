@@ -97,6 +97,12 @@ const EducationSection = () => {
       date: "Feb 2025",
       url: "https://coursera.org/share/b66f80dbfe633b576d9f819a01e78c80"
     },
+    {
+      title: "Google IT Support Certificate",
+      organization: "Coursera",
+      date: "Nov 2021",
+      url: "https://www.credly.com/badges/1b97c5ee-b7ad-4c15-8fbc-f4276066f665/linked_in"
+    },
   ];
 
   return (
