@@ -21,7 +21,7 @@ const ContactSection = () => {
       icon: Linkedin,
       label: "LinkedIn",
       value: "Thandeka Cacambile",
-      link: "www.linkedin.com/in/thandeka-cacambile-11b791220"
+      link: "https://www.linkedin.com/in/thandeka-cacambile-11b791220/"
     },
     {
       icon: Github,
