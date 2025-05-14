@@ -1,6 +1,7 @@
 
 import { Button } from './ui/button';
 import { MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
@@ -36,7 +37,7 @@ const HeroSection = () => {
                 className="border-brand-red text-brand-red hover:bg-brand-red/5 dark:border-brand-red dark:text-brand-red dark:hover:bg-brand-red/10"
                 asChild
               >
-                <a href="#contact">Contact Me</a>
+                <Link to="/contact">Contact Me</Link>
               </Button>
             </div>
           </div>
