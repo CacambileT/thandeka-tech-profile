@@ -11,6 +11,9 @@ const Experience = () => {
       <Header />
       <div className="pt-20">
         <ExperienceSection />
+        <div className="container mx-auto px-4 py-8 text-center text-gray-600 dark:text-gray-300 text-sm">
+          Built with React, Tailwind CSS, and shadcn/ui components.
+        </div>
       </div>
       <Footer />
       <ScrollToTop />

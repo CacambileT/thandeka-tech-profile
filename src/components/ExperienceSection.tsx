@@ -1,3 +1,4 @@
+
 import { Briefcase, Calendar, Hospital } from 'lucide-react';
 import { Card } from './ui/card';
 import { Table, TableBody, TableCell, TableRow } from './ui/table';
@@ -89,7 +90,7 @@ const ExperienceSection = () => {
         </h3>
         <div className="space-y-8">
           {workExperiences.map((exp, index) => (
-            <Card key={index} className={`p-6 md:p-8 border-l-4 border-l-${exp.color} dark:bg-gray-800 dark:border-gray-700`}>
+            <Card key={index} className={`p-6 md:p-8 border-l-4 ${exp.color === 'brand-red' ? 'border-l-brand-red' : 'border-l-brand-gold'} dark:bg-gray-800 dark:border-gray-700`}>
               <div className="flex flex-wrap justify-between items-start gap-2 mb-4">
                 <h3 className="text-xl font-bold text-brand-dark dark:text-white">{exp.title}</h3>
                 <span className="inline-block px-3 py-1 bg-brand-red/10 text-brand-red rounded-full text-sm font-medium dark:bg-brand-red/20">
@@ -105,7 +106,7 @@ const ExperienceSection = () => {
                 {exp.responsibilities.map((resp, idx) => (
                   <div key={idx} className="flex items-start gap-2">
                     <span className="text-brand-red mt-1">•</span>
-                    <p className="text-gray-700 dark:text-gray-200">{resp}</p>
+                    <p className="text-gray-700 dark:text-gray-300">{resp}</p>
                   </div>
                 ))}
               </div>
@@ -147,7 +148,7 @@ const ExperienceSection = () => {
               
               <p className="text-gray-600 dark:text-gray-300 mb-4">{project.institution}</p>
               
-              <p className="text-gray-700 dark:text-gray-200">{project.description}</p>
+              <p className="text-gray-700 dark:text-gray-300">{project.description}</p>
             </Card>
           ))}
         </div>
