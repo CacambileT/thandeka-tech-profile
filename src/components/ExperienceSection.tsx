@@ -1,4 +1,3 @@
-
 import { Briefcase, Calendar, Hospital } from 'lucide-react';
 import { Card } from './ui/card';
 import { Table, TableBody, TableCell, TableRow } from './ui/table';
@@ -45,7 +44,6 @@ const ExperienceSection = () => {
     }
   ];
 
-  // Reordering projects from newest to oldest
   const projects = [
     {
       title: "TaskStream - Cloud Project",
@@ -78,17 +76,13 @@ const ExperienceSection = () => {
 
   return (
     <section id="experience" className="section-container bg-gray-50 dark:bg-gray-800">
-      <div className="flex items-center gap-2 mb-8">
-        <Briefcase className="h-6 w-6 text-brand-red" />
-        <h2 className="section-heading dark:text-white">Work & Project Experience</h2>
-      </div>
+      {/* Work Experience Section */}
+      <div className="mb-12">
+        <div className="flex items-center gap-2 mb-8">
+          <Calendar className="h-6 w-6 text-brand-red" />
+          <h2 className="section-heading dark:text-white">Work Experience</h2>
+        </div>
 
-    <div className="space-y-12">
-      <div>
-        <h3 className="text-xl font-bold mb-6 text-brand-dark dark:text-white flex items-center gap-2">
-          <Calendar className="h-5 w-5 text-brand-red" />
-          Work Experience
-        </h3>
         <div className="space-y-8">
           {workExperiences.map((exp, index) => (
             <Card key={index} className={`p-6 md:p-8 border-l-4 ${exp.color === 'brand-red' ? 'border-l-brand-red' : 'border-l-brand-gold'} dark:bg-gray-800 dark:border-gray-700`}>
@@ -116,11 +110,13 @@ const ExperienceSection = () => {
         </div>
       </div>
 
+      {/* Projects Section */}
       <div>
-        <h3 className="text-xl font-bold mb-6 text-brand-dark dark:text-white flex items-center gap-2">
-          <Briefcase className="h-5 w-5 text-brand-red" />
-          Project
-        </h3>
+        <div className="flex items-center gap-2 mb-8">
+          <Briefcase className="h-6 w-6 text-brand-red" />
+          <h2 className="section-heading dark:text-white">Projects</h2>
+        </div>
+
         <div className="space-y-8">
           {projects.map((project, index) => (
             <Card key={index} className={`p-6 md:p-8 border-l-4 ${index % 2 === 0 ? 'border-l-brand-red' : 'border-l-brand-gold'} dark:bg-gray-800 dark:border-gray-700`}>
@@ -154,8 +150,7 @@ const ExperienceSection = () => {
           ))}
         </div>
       </div>
-    </div>
-  </section>
+    </section>
   );
 };
 
