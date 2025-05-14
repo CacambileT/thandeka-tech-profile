@@ -22,7 +22,7 @@ const Footer = () => {
           </a>
 
           <a 
-            href="https://www.linkedin.com/in/thandeka-cacambile-11b791220" 
+            href="https://www.linkedin.com/in/thandeka-cacambile-11b791220/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
