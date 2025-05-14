@@ -7,7 +7,7 @@ const AboutSection = () => {
     <section id="about" className="section-container bg-gray-50 dark:bg-gray-900">
       <div className="flex items-center gap-2 mb-8">
         <User className="h-6 w-6 text-brand-red" />
-        <h2 className="section-heading text-brand-dark dark:text-white">About Me</h2>
+        <h2 className="section-heading text-brand-dark dark:text-white">About Me https://capeitinitiative-my.sharepoint.com/:i:/g/personal/thandeka_cacambile_capaciti_org_za/ERtOxFdvda1BjV2JNt_6AS4BNDYw-RSBRDQIdwjXoBrWnQ?e=ekFxyD</h2>
       </div>
       
       <Card className="p-6 md:p-8 shadow-lg border-t-4 border-t-brand-red dark:bg-gray-800">
