@@ -45,7 +45,15 @@ const ExperienceSection = () => {
     }
   ];
 
+  // Reordering projects from newest to oldest
   const projects = [
+    {
+      title: "TaskStream - Cloud Project",
+      period: "April 2025",
+      institution: "CAPACITI",
+      description: "TaskStream is a simple, efficient task management app created using Google's no-code AppSheet platform. Designed to streamline daily planning, TaskStream helps users prioritize important tasks, stay organized, and reduce stress. With a clean interface and customizable features, it clarifies your daily workflow—making productivity easier and more accessible for everyone.",
+      url: "https://www.appsheet.com/start/41090437-fc54-4566-b88c-6666d863411e"
+    },
     {
       title: "Personal Portfolio Website",
       period: "2025",
@@ -65,13 +73,6 @@ const ExperienceSection = () => {
       period: "Feb - June 2024",
       institution: "Cape Peninsula University of Technology",
       description: "This project involved setting up Lab 1.30 at CPUT as a fully functional data center to support Work Integrated Learning (WIL) activities. The setup included VLAN-based network segmentation for security and efficiency, a Kubernetes cluster for containerized application deployment, and distributed storage solutions to meet the needs of students in Multimedia Applications, Application Development, and Communication Networks."
-    },
-    {
-      title: "TaskStream - Cloud Project",
-      period: "April 2025",
-      institution: "CAPACITI",
-      description: "TaskStream is a simple, efficient task management app created using Google's no-code AppSheet platform. Designed to streamline daily planning, TaskStream helps users prioritize important tasks, stay organized, and reduce stress. With a clean interface and customizable features, it clarifies your daily workflow—making productivity easier and more accessible for everyone.",
-      url: "https://www.appsheet.com/start/41090437-fc54-4566-b88c-6666d863411e"
     }
   ];
 
