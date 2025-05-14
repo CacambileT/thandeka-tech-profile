@@ -1,6 +1,6 @@
 
 import { Button } from './ui/button';
-import { MapPin } from 'lucide-react';
+import { MapPin, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
@@ -38,6 +38,17 @@ const HeroSection = () => {
                 asChild
               >
                 <Link to="/contact">Contact Me</Link>
+              </Button>
+              
+              <Button 
+                variant="outline" 
+                className="border-brand-gold text-brand-gold hover:bg-brand-gold/5 dark:border-brand-gold dark:text-brand-gold dark:hover:bg-brand-gold/10"
+                asChild
+              >
+                <a href="https://capeitinitiative-my.sharepoint.com/:b:/g/personal/thandeka_cacambile_capaciti_org_za/ESKc8Iz2qAFEmIxVxgoRx1oBWidIJU7tq-3WvueQn-AhNA?e=RPuXx2" target="_blank" rel="noopener noreferrer">
+                  <FileText className="mr-2" />
+                  Resume
+                </a>
               </Button>
             </div>
           </div>
