@@ -27,7 +27,7 @@ const ContactSection = () => {
       icon: Github,
       label: "GitHub",
       value: "thandekacacambile",
-      link: "https://github.com/thandekacacambile"
+      link: "https://github.com/CacambileT"
     }
   ];
 
