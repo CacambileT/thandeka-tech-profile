@@ -119,7 +119,7 @@ const ExperienceSection = () => {
       <div>
         <h3 className="text-xl font-bold mb-6 text-brand-dark dark:text-white flex items-center gap-2">
           <Briefcase className="h-5 w-5 text-brand-red" />
-          Project Experience
+          Project
         </h3>
         <div className="space-y-8">
           {projects.map((project, index) => (
