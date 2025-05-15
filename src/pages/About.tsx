@@ -1,5 +1,4 @@
 
-import Image from 'next/image';
 import AboutSection from '@/components/AboutSection';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
@@ -12,8 +11,8 @@ const About = () => {
       <Header />
       <div className="pt-20 flex flex-col items-center px-4">
         <div className="mb-10">
-          <Image
-            src="/images/About me.jpg" // make sure this matches the file you placed in `public/images`
+          <img
+            src="/lovable-uploads/About me.jpg" 
             alt="Portrait"
             width={400}
             height={500}
@@ -22,8 +21,8 @@ const About = () => {
         </div>
         <AboutSection />
         <div className="mt-10">
-          <Image
-            src="/images/About me.jpg" // using the same image as above
+          <img
+            src="/lovable-uploads/About me.jpg"
             alt="Portrait"
             width={400}
             height={500}
