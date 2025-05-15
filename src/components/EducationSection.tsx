@@ -22,7 +22,7 @@ const EducationSection = () => {
       duration: "3 years",
       color: "border-brand-red",
       image: "/lovable-uploads/17d7c7c1-43b2-44fe-ab68-ba7c36e3cc32.png",
-      url: "/lovable-uploads/THANDEKA CACAMBILE's HC.pdf"
+      url: "https://capeitinitiative-my.sharepoint.com/:b:/g/personal/thandeka_cacambile_capaciti_org_za/ESv_rC0BM8lHrAVxe0lzvYkBjUumJzqk71Xi2vHlbfdwjQ?e=chLY2B"
     },
     {
       degree: "Higher Certificate in Information and Communication Technology",
@@ -30,7 +30,7 @@ const EducationSection = () => {
       duration: "1 year",
       color: "border-brand-gold",
       image: "/lovable-uploads/17d7c7c1-43b2-44fe-ab68-ba7c36e3cc32.png",
-      url: "/lovable-uploads/THANDEKA CACAMBILE's Letter of Completion .pdf"
+      url: "https://capeitinitiative-my.sharepoint.com/:b:/g/personal/thandeka_cacambile_capaciti_org_za/EdISXG0snfxMhpXTplOMAUMBY-M3NZCxvf1i1JWqoSTmIA?e=Ms20Pf"
     },
     {
       degree: "National Senior Certificate",
@@ -161,6 +161,7 @@ const EducationSection = () => {
             {certifications.map((cert, index) => (
               <Card key={index} className="p-4 card-hover dark:bg-gray-800 dark:border-gray-700">
                 <div className="flex items-start gap-4">
+                  {/* Remove the conditional rendering for badge since it doesn't exist */}
                   <div className="flex-1">
                     <h4 className="font-medium text-brand-dark dark:text-white text-brand-gold">
                       {cert.url ? (
