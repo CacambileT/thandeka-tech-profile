@@ -10,15 +10,6 @@ const About = () => {
     <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
       <Header />
       <div className="pt-20 flex flex-col items-center px-4">
-        <div className="mb-10">
-          <img
-            src="/lovable-uploads/About me.jpg" 
-            alt="Portrait"
-            width={400}
-            height={500}
-            className="rounded-2xl shadow-lg object-cover"
-          />
-        </div>
         <AboutSection />
         <div className="mt-10">
           <img
