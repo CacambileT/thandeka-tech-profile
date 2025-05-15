@@ -3,7 +3,7 @@ import React from 'react';
 
 const AboutSection = () => {
   return (
-    <div>
+ <div>
       <h2 className="text-3xl font-bold mb-6 text-gray-800 dark:text-white">About Me</h2>
       
       <div className="prose dark:prose-invert max-w-none">
