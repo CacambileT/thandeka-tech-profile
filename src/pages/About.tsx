@@ -13,7 +13,7 @@ const About = () => {
         <div className="flex flex-col md:flex-row md:items-start md:gap-8 lg:gap-12">
           <div className="md:w-1/2 lg:w-2/5 mb-8 md:mb-0 flex justify-center md:justify-end">
             <img
-              src="https://github.com/CacambileT/thandeka-tech-profile/blob/main/public/lovable-uploads/About me.jpg"
+              src="/lovable-uploads/About me.jpg"
               alt="Portrait"
               width={400}
               height={500}
