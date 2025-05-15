@@ -30,7 +30,7 @@ const EducationSection = () => {
       duration: "1 year",
       color: "border-brand-gold",
       image: "/lovable-uploads/17d7c7c1-43b2-44fe-ab68-ba7c36e3cc32.png",
-      pdf: "/pdfs/higher-certificate-ict.pdf" // Local or hosted file
+      pdf: "https://github.com/CacambileT/thandeka-tech-profile/blob/main/public/lovable-uploads/THANDEKA%20CACAMBILE%E2%80%99s%20HC.pdf" 
     }
   ];
 
