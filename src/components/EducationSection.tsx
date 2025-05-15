@@ -161,17 +161,7 @@ const EducationSection = () => {
             {certifications.map((cert, index) => (
               <Card key={index} className="p-4 card-hover dark:bg-gray-800 dark:border-gray-700">
                 <div className="flex items-start gap-4">
-                  {cert.badge && (
-                    <div className="flex-shrink-0 w-16 h-16">
-                      <AspectRatio ratio={1}>
-                        <img 
-                          src={cert.badge} 
-                          alt={`${cert.title} badge`} 
-                          className="w-full h-full object-contain"
-                        />
-                      </AspectRatio>
-                    </div>
-                  )}
+                  {/* Remove the conditional rendering for badge since it doesn't exist */}
                   <div className="flex-1">
                     <h4 className="font-medium text-brand-dark dark:text-white text-brand-gold">
                       {cert.url ? (
