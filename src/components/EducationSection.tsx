@@ -16,13 +16,13 @@ const EducationSection = () => {
       inProgress: true,
       url: "https://capeitinitiative-my.sharepoint.com/:b:/g/personal/thandeka_cacambile_capaciti_org_za/EUqsPSyoMrtNpkSsoCWGk6EBJytGv0s2e6Vt54h-FSR8EA?e=ajBmqI"
     },
-     {
+   {
       degree: "Diploma in Communication Networks",
       institution: "Cape Peninsula University of Technology",
       duration: "3 years",
       color: "border-brand-red",
       image: "/lovable-uploads/17d7c7c1-43b2-44fe-ab68-ba7c36e3cc32.png",
-      pdf: "/pdfs/diploma-in-communication-networks.pdf" // Local or hosted file
+      url: "https://capeitinitiative-my.sharepoint.com/:b:/g/personal/thandeka_cacambile_capaciti_org_za/ESv_rC0BM8lHrAVxe0lzvYkBjUumJzqk71Xi2vHlbfdwjQ?e=chLY2B"
     },
     {
       degree: "Higher Certificate in Information and Communication Technology",
@@ -30,45 +30,8 @@ const EducationSection = () => {
       duration: "1 year",
       color: "border-brand-gold",
       image: "/lovable-uploads/17d7c7c1-43b2-44fe-ab68-ba7c36e3cc32.png",
-      pdf: "https://github.com/CacambileT/thandeka-tech-profile/blob/main/public/lovable-uploads/THANDEKA%20CACAMBILE%E2%80%99s%20HC.pdf" 
-    }
-  ];
-
-  return (
-    <div className="education-section">
-      {educations.map((edu, index) => (
-        <div key={index} className={`education-card ${edu.color}`}>
-          <img src={edu.image} alt={`${edu.degree} logo`} />
-          <h3>{edu.degree}</h3>
-          <p>{edu.institution}</p>
-          <p>{edu.duration}</p>
-
-          {edu.url && (
-            <a
-              href={edu.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 underline"
-            >
-              View Certificate (PDF)
-            </a>
-          )}
-
-          {edu.pdf && (
-            <div className="mt-2">
-              <iframe
-                src={edu.pdf}
-                width="100%"
-                height="400px"
-                title={`${edu.degree} PDF`}
-              ></iframe>
-            </div>
-          )}
-        </div>
-      ))}
-    </div>
-  );
-};
+      url: "https://capeitinitiative-my.sharepoint.com/:b:/g/personal/thandeka_cacambile_capaciti_org_za/EdISXG0snfxMhpXTplOMAUMBY-M3NZCxvf1i1JWqoSTmIA?e=Ms20Pf"
+    },
     {
       degree: "National Senior Certificate",
       institution: "Phandulwazi Agricultural High School",
