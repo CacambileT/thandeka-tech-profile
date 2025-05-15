@@ -16,7 +16,7 @@ const EducationSection = () => {
       inProgress: true,
       url: "https://capeitinitiative-my.sharepoint.com/:b:/g/personal/thandeka_cacambile_capaciti_org_za/EUqsPSyoMrtNpkSsoCWGk6EBJytGv0s2e6Vt54h-FSR8EA?e=ajBmqI"
     },
-   {
+    {
       degree: "Diploma in Communication Networks",
       institution: "Cape Peninsula University of Technology",
       duration: "3 years",
