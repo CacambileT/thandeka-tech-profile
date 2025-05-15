@@ -21,6 +21,15 @@ const About = () => {
           />
         </div>
         <AboutSection />
+        <div className="mt-10">
+          <Image
+            src="/images/About me.jpg" // using the same image as above
+            alt="Portrait"
+            width={400}
+            height={500}
+            className="rounded-2xl shadow-lg object-cover"
+          />
+        </div>
       </div>
       <Footer />
       <ScrollToTop />
