@@ -30,7 +30,7 @@ const EducationSection = () => {
       duration: "1 year",
       color: "border-brand-gold",
       image: "/lovable-uploads/17d7c7c1-43b2-44fe-ab68-ba7c36e3cc32.png",
-      url: "/lovable-uploads/THANDEKA CACAMBILE's Letter of Completion .pdf"
+      url: "https://capeitinitiative-my.sharepoint.com/:b:/g/personal/thandeka_cacambile_capaciti_org_za/EbFgPkK6S9xCsGPNo9J1PlIBgG5W7cu_rPkPJZUO-EIs4A?e=B935WY"
     },
     {
       degree: "National Senior Certificate",
